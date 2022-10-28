@@ -4,7 +4,7 @@
 vmSize: Standard_D4s_v3
 
 # zones: ['1','2','3']
-zoneCount: 3
+zoneCount: 2
 replicasPerZone: 1
 
 # default will create infra nodes
@@ -19,8 +19,8 @@ machineTaints:
 
 ## Ignore these unless using `helm template` as they're auto-discovered.
 clusterSpec:
-  infraId: aro-cluster-hsmtw
-  location: eastus
+  infraId: bifrost-cluster-9zps5
+  location: northeurope
 
 machineSetSpec:
   image:
@@ -29,8 +29,8 @@ machineSetSpec:
     resourceID: ""
     sku: aro_410
     version: 410.84.20220125
-  location: eastus
-  networkResourceGroup: aro-cluster-rg
+  location: northeurope
+  networkResourceGroup: bifrost-aro
   osDisk:
     diskSettings: {}
     diskSizeGB: 128
@@ -38,7 +38,7 @@ machineSetSpec:
       storageAccountType: Premium_LRS
     osType: Linux
   publicIP: false
-  publicLoadBalancer: aro-cluster-hsmtw
-  resourceGroup: aro-cddajpe1
-  subnet: aro-cluster-machine-subnet
-  vnet: aro-cluster-vnet
+  publicLoadBalancer: bifrost-cluster-9zps5
+  resourceGroup: aro-izvqz38w
+  subnet: bifrost-cluster-aro-worker-subnet
+  vnet: bifrost-cluster-aro-vnet
